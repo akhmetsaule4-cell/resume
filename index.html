@@ -2,11 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Сауле Ахмет | Стратегическое управление фармпроизводством | Вайб-кодинг</title>
-    <!-- Preconnect for Google Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сауле Ахмет | Стратегическое управление фармпроизводством</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -14,197 +12,136 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f4f7fc;
             color: #1e2a3e;
-            line-height: 1.5;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
-
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* hero section */
-        .hero {
+        /* ===== HEADER / NAV ===== */
+        .header {
             background: linear-gradient(135deg, #0b2b3b 0%, #124c64 100%);
             color: white;
-            padding: 60px 0 48px;
-            border-bottom-left-radius: 32px;
-            border-bottom-right-radius: 32px;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
-
-        .hero-content {
+        .header-inner {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 32px;
-        }
-
-        .hero-text {
-            flex: 2;
-        }
-
-        .hero-badge {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 40px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .hero-title {
-            font-size: 1.35rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-            opacity: 0.9;
-            border-left: 4px solid #47d7ac;
-            padding-left: 16px;
-        }
-
-        .hero-desc {
-            font-size: 1rem;
-            margin-bottom: 28px;
-            max-width: 90%;
-            opacity: 0.92;
-        }
-
-        .contact-buttons {
-            display: flex;
+            padding: 16px 0;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 12px;
         }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: #124c64;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        .btn-outline-light {
-            background: transparent;
-            border: 1.5px solid rgba(255,255,255,0.5);
-            color: white;
-        }
-
-        .btn-outline-light:hover {
-            background: rgba(255,255,255,0.12);
-            border-color: white;
-        }
-
-        .btn-primary {
-            background: #47d7ac;
-            color: #0b2b3b;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .btn-primary:hover {
-            background: #3bc49b;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline-light:hover {
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            flex: 1;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(4px);
-            border-radius: 28px;
-            padding: 24px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.25);
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
+        .logo {
+            font-size: 1.4rem;
             font-weight: 800;
-            display: block;
-            line-height: 1;
-            color: #ffdd99;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* sections */
-        .section {
-            padding: 64px 0;
-            border-bottom: 1px solid #e2edf2;
+        .logo span {
+            color: #47d7ac;
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+        .nav a:hover {
+            background: rgba(255,255,255,0.12);
+            color: white;
+        }
+        .nav a.active {
+            background: rgba(71, 215, 172, 0.25);
+            color: #47d7ac;
         }
 
-        .section:last-child {
-            border-bottom: none;
+        /* ===== PAGES ===== */
+        .page {
+            display: none;
+            padding: 48px 0 64px;
+        }
+        .page.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .section-title {
-            font-size: 1.9rem;
-            font-weight: 700;
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 800;
             color: #0e3b4b;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
+            margin-bottom: 32px;
         }
-        .section-title:after {
+        .page-title:after {
             content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
+            display: block;
             width: 60px;
             height: 4px;
             background: #47d7ac;
             border-radius: 4px;
+            margin-top: 8px;
         }
 
+        /* ===== CARDS & GRID ===== */
         .grid-2col {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
         }
-
+        .grid-3col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
         .card {
             background: white;
-            border-radius: 28px;
+            border-radius: 24px;
             padding: 24px 28px;
-            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
-            transition: all 0.25s;
+            box-shadow: 0 8px 24px -12px rgba(0,0,0,0.1);
             border: 1px solid #e9f0f4;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 28px -14px rgba(0,0,0,0.12);
+            box-shadow: 0 16px 32px -14px rgba(0,0,0,0.14);
+        }
+        .card-icon {
+            font-size: 2rem;
+            color: #47d7ac;
+            margin-bottom: 12px;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #0e3b4b;
+        }
+        .card p {
+            color: #2c4253;
+            font-size: 0.95rem;
         }
 
         .skill-tag {
@@ -215,9 +152,8 @@
             font-size: 0.8rem;
             font-weight: 500;
             display: inline-block;
-            margin: 6px 6px 0 0;
+            margin: 4px 4px 0 0;
         }
-
         .vibe-tag {
             background: linear-gradient(135deg, #d9f0ec, #c2e9e0);
             color: #0a4b5e;
@@ -225,7 +161,8 @@
             font-weight: 600;
         }
 
-        .experience-item {
+        /* ===== EXPERIENCE ===== */
+        .exp-item {
             margin-bottom: 32px;
             border-left: 3px solid #47d7ac;
             padding-left: 20px;
@@ -235,7 +172,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 8px;
         }
         .exp-company {
             font-weight: 800;
@@ -250,344 +186,426 @@
         .exp-role {
             font-weight: 600;
             color: #2c6e8a;
-            margin: 6px 0 10px 0;
+            margin: 4px 0 8px;
             font-size: 0.95rem;
         }
         .exp-desc {
             font-size: 0.9rem;
             color: #2c4253;
-            margin-top: 8px;
-            list-style-position: inside;
+            padding-left: 20px;
         }
-        .exp-desc li {
-            margin-bottom: 6px;
+        .exp-desc li { margin-bottom: 4px; }
+
+        /* ===== VIBE CODING EXAMPLES ===== */
+        .vibe-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 24px;
+            border-left: 5px solid #47d7ac;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
+        }
+        .vibe-card:hover { transform: translateX(6px); }
+        .vibe-card h4 {
+            color: #0e3b4b;
+            margin-bottom: 4px;
+        }
+        .vibe-card p {
+            color: #2c4253;
+            font-size: 0.9rem;
         }
 
-        .achievement-grid {
-            display: flex;
-            flex-wrap: wrap;
+        /* ===== CONTACT ===== */
+        .contact-card {
+            background: white;
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 1px solid #e9f0f4;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
             gap: 12px;
-            margin-top: 16px;
-        }
-        .achievement-badge {
-            background: #e7f5ef;
+            background: #25D366;
+            color: white;
+            padding: 14px 36px;
             border-radius: 60px;
-            padding: 6px 14px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #1b7e5c;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #47d7ac;
+            color: #0e3b4b;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            background: #47d7ac;
+            color: white;
         }
 
-        .quote {
-            background: #e1f2ee;
-            border-radius: 32px;
-            padding: 32px;
-            font-style: normal;
-            font-weight: 500;
-            color: #0e4d5e;
-            margin: 32px 0 0;
-            border-left: 8px solid #47d7ac;
-        }
-
+        /* ===== FOOTER ===== */
         .footer {
             background: #0b2b3b;
             color: #cddfe6;
-            padding: 40px 0 32px;
+            padding: 32px 0 24px;
             text-align: center;
             border-top-left-radius: 32px;
             border-top-right-radius: 32px;
             margin-top: 24px;
         }
 
-        @media (max-width: 800px) {
-            .hero-text h1 { font-size: 2.2rem; }
-            .hero-content { flex-direction: column; }
-            .hero-stats { width: 100%; }
-            .hero-desc { max-width: 100%; }
-            .section { padding: 48px 0; }
+        /* ===== TOAST ===== */
+        .toast {
+            visibility: hidden;
+            min-width: 280px;
+            background: #0b2b3b;
+            color: #fff;
+            text-align: center;
+            border-radius: 40px;
+            padding: 14px 24px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        i.icon-mr { margin-right: 8px; width: 20px; color: #47d7ac; }
-        .flex-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-        .contact-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-        .highlight-gradient {
-            background: linear-gradient(120deg, #f0f9f5, #e2f3ed);
-            border-radius: 24px;
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 700px) {
+            .header-inner { flex-direction: column; align-items: stretch; }
+            .nav { justify-content: center; }
+            .nav a { font-size: 0.8rem; padding: 6px 12px; }
+            .page-title { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">Эксперт-практик • Стратегический управленец • Вайб-кодинг</div>
-                <h1>Сауле Ахмет</h1>
-                <div class="hero-title">Директор / Заместитель генерального директора по качеству<br> Более 17 лет в фармацевтическом производстве</div>
-                <div class="hero-desc">
-                    Внедряю «прозрачное» производство через авторские IT-решения. Перевожу предприятия из режима «исправления ошибок» в проактивное предотвращение отклонений. Системная организация процессов, GMP, регистрация, клинические исследования. <strong>Владею методологией вайб-кодинга</strong> для быстрого прототипирования внутренних инструментов.
-                </div>
-                <div class="contact-buttons">
-                    <a href="mailto:akhmetsaule4@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Написать</a>
-                    <a href="#" class="btn btn-outline-light" id="copyPhoneBtn"><i class="fas fa-phone-alt"></i> +7 777 7717707</a>
-                    <a href="#" class="btn btn-outline-light" id="copyCvBtn"><i class="fas fa-file-pdf"></i> Резюме (PDF)</a>
-                </div>
-            </div>
-            <div class="hero-stats">
-                <div><span class="stat-number">17+</span> <span class="stat-label">лет в фармацевтике</span></div>
-                <div style="margin: 20px 0;"><span class="stat-number">5+</span> <span class="stat-label">клинических / доклинических исследований</span></div>
-                <div><span class="stat-number">120+</span> <span class="stat-label">сотрудников в управлении</span></div>
-            </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">Сауле <span>Ахмет</span></div>
+            <nav class="nav" id="mainNav">
+                <a class="active" data-page="home"><i class="fas fa-home"></i> Главная</a>
+                <a data-page="experience"><i class="fas fa-briefcase"></i> Опыт</a>
+                <a data-page="vibecoding"><i class="fas fa-magic"></i> Вайб-кодинг</a>
+                <a data-page="skills"><i class="fas fa-star"></i> Компетенции</a>
+                <a data-page="contact"><i class="fas fa-phone"></i> Контакты</a>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast" class="toast">✅ Скопировано!</div>
 
     <div class="container">
-        <!-- КЛЮЧЕВАЯ КОМПЕТЕНЦИЯ + НАВЫК ВАЙБ-КОДИНГА -->
-        <div class="section">
-            <h2 class="section-title">Ключевая стратегия & компетенции</h2>
+
+        <!-- ===== PAGE: HOME ===== -->
+        <section class="page active" id="page-home">
+            <div style="display:flex; flex-wrap:wrap; gap:40px; align-items:center; margin-bottom:40px;">
+                <div style="flex:2;">
+                    <div style="background:#e1f2ee; display:inline-block; padding:4px 16px; border-radius:40px; font-weight:600; font-size:0.85rem; color:#0e4d5e;">Эксперт-практик • GMP • Вайб-кодинг</div>
+                    <h1 style="font-size:2.8rem; font-weight:800; margin:16px 0 8px; color:#0e3b4b;">Сауле Ахмет</h1>
+                    <p style="font-size:1.2rem; font-weight:500; color:#2c6e8a;">Директор / Заместитель генерального директора по качеству</p>
+                    <p style="margin-top:16px; font-size:1.05rem; color:#2c4253;">Более 17 лет в фармацевтике. Внедряю «прозрачное» производство через авторские IT-решения. Перевожу предприятия из режима «исправления ошибок» в проактивное предотвращение отклонений.</p>
+                    <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:12px;">
+                        <a href="https://wa.me/77777717707" target="_blank" class="btn-whatsapp" style="padding:12px 28px; font-size:1rem;">
+                            <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                        </a>
+                        <button class="btn-outline" id="copyPhoneBtn"><i class="fas fa-phone-alt"></i> Сохранить номер</button>
+                    </div>
+                </div>
+                <div style="flex:1; background:linear-gradient(135deg,#124c64,#0b2b3b); border-radius:28px; padding:32px 24px; color:white; text-align:center;">
+                    <div><span style="font-size:2.5rem; font-weight:800; color:#ffdd99;">17+</span><br><span style="font-size:0.9rem; opacity:0.8;">лет в фармацевтике</span></div>
+                    <div style="margin:20px 0;"><span style="font-size:2.5rem; font-weight:800; color:#ffdd99;">5+</span><br><span style="font-size:0.9rem; opacity:0.8;">клинических исследований</span></div>
+                    <div><span style="font-size:2.5rem; font-weight:800; color:#ffdd99;">120+</span><br><span style="font-size:0.9rem; opacity:0.8;">сотрудников в управлении</span></div>
+                </div>
+            </div>
+
+            <div class="grid-2col" style="margin-top:16px;">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Проактивное управление качеством</h3>
+                    <p>Непрерывная верификация процессов, CAPA, управление рисками, предупреждение отклонений.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Цифровизация & IT-решения</h3>
+                    <p>Bitrix24, голосовые боты (Twin), оцифровка QC/QA, автоматизация рутины.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-flask"></i></div>
+                    <h3>GMP • СОП • Регистрация</h3>
+                    <p>Разработка СОП по GMP, сопровождение клинических исследований, актуализация НПА.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Вайб-кодинг</h3>
+                    <p>Быстрое прототипирование, low-code/no-code, промпт-инжиниринг, скрипты для автоматизации.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAGE: EXPERIENCE ===== -->
+        <section class="page" id="page-experience">
+            <h2 class="page-title">Опыт работы</h2>
+
+            <div class="exp-item">
+                <div class="exp-header"><span class="exp-company">ТОО «PHARMA TECH STANDART» (PTS)</span><span class="exp-period">2026 — н.в.</span></div>
+                <div class="exp-role">Директор ТОО</div>
+                <ul class="exp-desc"><li>Импорт средств гигиены под казахстанским брендом, разработка спецификации OEM производства.</li></ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header"><span class="exp-company">ТОО «GSG Pharma Corporation» (концентраты для гемодиализа)</span><span class="exp-period">авг 2024 — янв 2026</span></div>
+                <div class="exp-role">Заместитель генерального директора по качеству (ПРК)</div>
+                <ul class="exp-desc">
+                    <li>Узаконила деятельность: исправление ошибок в лицензиях.</li>
+                    <li>Легализовала продукт: актуализация СТ и РУ на МИ.</li>
+                    <li>Оцифровала процессы: создание калькулятора расхода сырья.</li>
+                    <li>Создала систему мониторинга сырья.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header"><span class="exp-company">ТОО «Dolce» (Медицинские изделия, штат 400)</span><span class="exp-period">июль 2021 — март 2023</span></div>
+                <div class="exp-role">Исполнительный директор</div>
+                <ul class="exp-desc">
+                    <li>Организация бесперебойной работы всех участков производства.</li>
+                    <li>Внедрение элементов GMP в ISO 13485:2016.</li>
+                    <li>Аудит новых проектов до DQ, управление CAPA.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header"><span class="exp-company">ТОО «НУР-МАЙ ФАРМАЦИЯ» (инфузионные/инъекционные растворы, 120 чел)</span><span class="exp-period">2011 — 2021</span></div>
+                <div class="exp-role">Заместитель по производству / Заместитель по качеству</div>
+                <ul class="exp-desc">
+                    <li>Снижение брака пленки на 7% за счёт оптимизации линии Plumat.</li>
+                    <li>Оцифровка лабораторных данных (Excel-дашборды с ретроспективным анализом).</li>
+                    <li>Хронометраж сотрудников QA/QC, пересмотр ДИ.</li>
+                    <li>Разработка универсальных СОП под стандарты РК.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header"><span class="exp-company">ТОО «НУР-МАЙ ФАРМ» (директор завода)</span><span class="exp-period">2009 — 2011</span></div>
+                <div class="exp-role">Директор завода</div>
+                <ul class="exp-desc"><li>Полное управление производственным циклом, запуск новых линий.</li></ul>
+            </div>
+
+            <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:10px;">
+                <span class="skill-tag">🏆 Снижение брака пленки 7%</span>
+                <span class="skill-tag">📊 Оцифровка исторических данных</span>
+                <span class="skill-tag">🤖 Чат-боты для сотрудников</span>
+                <span class="skill-tag">📈 Автосводка KPI</span>
+            </div>
+        </section>
+
+        <!-- ===== PAGE: VIBE-CODING ===== -->
+        <section class="page" id="page-vibecoding">
+            <h2 class="page-title">Примеры вайб-кодинга</h2>
+            <p style="font-size:1.05rem; color:#2c4253; margin-bottom:32px; max-width:800px;">
+                <strong>Вайб-кодинг</strong> — это быстрое прототипирование и внедрение цифровых решений через интуитивные скрипты, low-code/no-code интеграции и промпт-инжиниринг. Ниже — мои реальные кейсы.
+            </p>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:24px;">
+                <div class="vibe-card">
+                    <h4><i class="fas fa-calculator" style="color:#47d7ac;"></i> Калькулятор расхода сырья</h4>
+                    <p>Excel + макросы для оперативного просчёта потребности в сырье. Время расчёта — с 2 часов до 3 минут. Исключены арифметические ошибки.</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Excel VBA</span><span class="skill-tag">Автоматизация</span></div>
+                </div>
+                <div class="vibe-card">
+                    <h4><i class="fas fa-chart-pie" style="color:#47d7ac;"></i> Дашборд лабораторных данных</h4>
+                    <p>Power Query + Excel для анализа испытаний за 3 года. Фильтрация по дате, партии, показателю. Ретроспективный анализ «в один клик».</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Power Query</span><span class="skill-tag">Дашборды</span></div>
+                </div>
+                <div class="vibe-card">
+                    <h4><i class="fas fa-robot" style="color:#47d7ac;"></i> Чат-бот для сотрудников</h4>
+                    <p>Twin + Bitrix24: голосовой бот отвечает на вопросы по СОП, графику смен, контактам. Экономия времени руководителя на 15–20%.</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Twin</span><span class="skill-tag">Bitrix24</span><span class="skill-tag">NLU</span></div>
+                </div>
+                <div class="vibe-card">
+                    <h4><i class="fas fa-file-signature" style="color:#47d7ac;"></i> Трекер регистрационных удостоверений</h4>
+                    <p>Bitrix24 с автоподсказками за 90/60/30 дней до истечения срока. Полностью исключены риски просрочек.</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Bitrix24</span><span class="skill-tag">CRM</span></div>
+                </div>
+                <div class="vibe-card">
+                    <h4><i class="fas fa-folder-tree" style="color:#47d7ac;"></i> Сетевая система версий СОП</h4>
+                    <p>Чёткая структура папок: «Действующие», «Архив», «На согласовании». Контроль версий, все используют актуальные документы.</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Документооборот</span><span class="skill-tag">СОП</span></div>
+                </div>
+                <div class="vibe-card">
+                    <h4><i class="fas fa-chart-bar" style="color:#47d7ac;"></i> Автосводка KPI</h4>
+                    <p>Google Sheets + скрипт: ежедневный сбор данных по браку, простоям, выполнению плана. Отправка в Telegram через webhook.</p>
+                    <div style="margin-top:8px;"><span class="skill-tag">Google Script</span><span class="skill-tag">Telegram API</span></div>
+                </div>
+            </div>
+
+            <div style="margin-top:32px; background:#e1f2ee; border-radius:24px; padding:24px; border-left:6px solid #47d7ac;">
+                <p style="font-weight:500; color:#0e4d5e;">
+                    <i class="fas fa-music" style="color:#47d7ac;"></i> Мой подход: «кодинг под вибрацию бизнеса» — создаю решения, которые чувствуют контекст, легко адаптируются и приносят пользу без лишней бюрократии.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== PAGE: SKILLS ===== -->
+        <section class="page" id="page-skills">
+            <h2 class="page-title">Компетенции & Образование</h2>
+
             <div class="grid-2col">
-                <div class="card">
-                    <i class="fas fa-chart-line" style="font-size: 2rem; color:#47d7ac; margin-bottom: 16px; display: inline-block;"></i>
-                    <h3 style="margin-bottom: 12px;">Проактивное управление качеством</h3>
-                    <p>Внедрение системы непрерывной верификации процессов, радикально сокращающей брак на ранних этапах. Перевод предприятия из «исправления ошибок» в предиктивную модель.</p>
-                    <div class="flex-list">
-                        <span class="skill-tag">Непрерывная верификация</span>
-                        <span class="skill-tag">Управление рисками</span>
-                        <span class="skill-tag">CAPA / Предупреждающие действия</span>
+                <div>
+                    <h3 style="color:#0e3b4b; margin-bottom:16px;"><i class="fas fa-graduation-cap" style="color:#47d7ac;"></i> Образование</h3>
+                    <div class="card">
+                        <p><strong>Провизор-аналитик</strong><br>КазНМУ им. С.Д. Асфендиярова, 1992</p>
+                        <hr style="margin:12px 0; border-color:#e9f0f4;">
+                        <p><strong>Ключевые сертификаты:</strong></p>
+                        <ul style="padding-left:20px; color:#2c4253; font-size:0.95rem;">
+                            <li>Лицензия №KZ25000751715 (ЛС и МИ, 2025)</li>
+                            <li>Лицензия №KZ25000384682 (ВШОЗ, 2025)</li>
+                            <li>Сертификат партнера Bitrix24.KZ (2024)</li>
+                            <li>Twin (РФ) — разработка голосовых ботов (2022)</li>
+                            <li>TUV AUSTRIA Management Program (2015)</li>
+                            <li>Первый МГМУ им. Сеченова (2014)</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-microchip" style="font-size: 2rem; color:#47d7ac; margin-bottom: 16px;"></i>
-                    <h3 style="margin-bottom: 12px;">Цифровизация & IT-решения</h3>
-                    <p>Авторские разработки: калькуляторы расхода сырья, сетевой обмен файлами, оцифровка лабораторных данных. Интеграция CRM (Bitrix24), голосовые боты (Twin), аналитика KPI.</p>
-                    <div class="flex-list">
-                        <span class="skill-tag">Bitrix24 эксперт</span>
-                        <span class="skill-tag">Голосовые боты / NLU</span>
-                        <span class="skill-tag">Оцифровка QC/QA</span>
+                <div>
+                    <h3 style="color:#0e3b4b; margin-bottom:16px;"><i class="fas fa-microchip" style="color:#47d7ac;"></i> Цифровые навыки</h3>
+                    <div class="card">
+                        <p><strong>Платформы & инструменты:</strong></p>
+                        <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;">
+                            <span class="skill-tag">Bitrix24</span>
+                            <span class="skill-tag">Twin</span>
+                            <span class="skill-tag">Excel (продвинутый)</span>
+                            <span class="skill-tag">Power Query</span>
+                            <span class="skill-tag">Google Apps Script</span>
+                            <span class="skill-tag">NLU</span>
+                            <span class="skill-tag">Промпт-инжиниринг</span>
+                            <span class="skill-tag">Python (скетчи)</span>
+                        </div>
+                        <hr style="margin:16px 0; border-color:#e9f0f4;">
+                        <p><strong>Стажировки:</strong> Kolpitt (Голландия), Bausch (Швейцария), Plumat (Германия), Shijiazhuang No.4 (Китай).</p>
                     </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-flask" style="font-size: 2rem; color:#47d7ac; margin-bottom: 16px;"></i>
-                    <h3 style="margin-bottom: 12px;">GMP • СОП • Регистрация</h3>
-                    <p>Разработка СОП по стандартам GMP, НЦЭЛС, Комитет медицинского и фармацевтического контроля РК. Сопровождение клинических исследований, актуализация нормативной базы.</p>
-                    <div class="flex-list">
-                        <span class="skill-tag">GDP / GMP аудит</span>
-                        <span class="skill-tag">ISO 13485:2016</span>
-                        <span class="skill-tag">Регистрация ЛС и МИ</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-chart-simple" style="font-size: 2rem; color:#47d7ac; margin-bottom: 16px;"></i>
-                    <h3 style="margin-bottom: 12px;">Операционная эффективность</h3>
-                    <p>Хронометраж, фотография рабочего дня, пересмотр ДИ, сокращение потерь сырья (снижение брака пленки на 7%), автоматизация рутины, контроль KPI.</p>
-                    <div class="flex-list">
-                        <span class="skill-tag">Бережливое производство</span>
-                        <span class="skill-tag">Оптимизация себестоимости</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- БЛОК ВАЙБ-КОДИНГ: уникальный навык -->
-            <div class="card" style="margin-top: 24px; background: linear-gradient(115deg, #ffffff 0%, #fafefc 100%); border-left: 8px solid #47d7ac;">
-                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
-                    <i class="fas fa-magic" style="font-size: 2rem; color:#0e6b5e;"></i>
-                    <h3 style="margin:0; font-size: 1.6rem; font-weight: 700;">✨ Вайб-кодинг</h3>
-                    <span class="skill-tag vibe-tag">передовая методология автоматизации</span>
-                </div>
-                <p style="font-size: 1rem; margin-bottom: 12px;"><strong>Владею навыком вайб-кодинга</strong> — способностью быстро прототипировать и внедрять цифровые решения через интуитивно понятные скрипты, low-code/no-code интеграции и промпт-инжиниринг. Создаю внутренние инструменты (калькуляторы, дашборды, трекеры) в сжатые сроки, синхронизируя бизнес-задачи с IT-архитектурой, не дожидаясь разработки полноценного софта.</p>
-                <div class="flex-list">
-                    <span class="skill-tag"><i class="fas fa-code-branch"></i> Rapid prototyping</span>
-                    <span class="skill-tag"><i class="fas fa-robot"></i> Промпт-инжиниринг для ботов</span>
-                    <span class="skill-tag"><i class="fas fa-charging-station"></i> Автоматизация Excel + Python-скетчи</span>
-                    <span class="skill-tag"><i class="fas fa-waveform"></i> Визуальное программирование (Twin, Bitrix24)</span>
-                </div>
-                <div class="quote" style="margin-top: 20px; background: #e2f0ec; padding: 18px; font-size: 0.9rem;">
-                    <i class="fas fa-music"></i> Мой подход: «кодинг под вибрацию бизнеса» — создаю решения, которые чувствуют контекст, легко адаптируются и приносят пользу без лишней бюрократии.
-                </div>
-            </div>
-
-            <div class="quote" style="margin-top: 28px;">
-                <i class="fas fa-quote-left" style="margin-right: 10px; opacity: 0.6;"></i> Моя философия: создание прослеживаемой системы мониторинга сырья и процессов, где каждое отклонение предупреждается до его возникновения. <strong>Вайб-кодинг ускоряет эту трансформацию</strong> — я сама проектирую цифровые контуры производства.
-            </div>
-        </div>
-
-        <!-- ОПЫТ РАБОТЫ -->
-        <div class="section">
-            <h2 class="section-title">Опыт работы (руководящие должности)</h2>
-            <div>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «PHARMA TECH STANDART» (PTS)</span>
-                        <span class="exp-period">2026 — настоящее время</span>
-                    </div>
-                    <div class="exp-role">Директор ТОО</div>
-                    <ul class="exp-desc" style="margin-left: 1rem;">
-                        <li>Импорт средств гигиены под казахстанским брендом, разработка спецификации OEM производства с усиленным SAP для тяжелых степеней инконтиненции.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «GSG Pharma Corporation» (концентраты для гемодиализа)</span>
-                        <span class="exp-period">авг 2024 — янв 2026</span>
-                    </div>
-                    <div class="exp-role">Заместитель генерального директора по качеству (ПРК)</div>
-                    <ul class="exp-desc">
-                        <li><strong>Узаконила деятельность:</strong> исправление ошибок в лицензиях (перенос адреса с домашнего на производственный).</li>
-                        <li><strong>Легализовала продукт:</strong> актуализация СТ и РУ на МИ, ликвидация рисков выпуска несоответствующей продукции.</li>
-                        <li><strong>Оцифровала процессы:</strong> сетевой обмен файлами, создание калькулятора расхода сырья (элемент вайб-кодинга для быстрого просчёта).</li>
-                        <li>Создала доказательную базу прослеживаемой системы мониторинга сырья.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «НУР-МАЙ ФАРМАЦИЯ» (инфузионные/инъекционные растворы)</span>
-                        <span class="exp-period">2025 — 2026</span>
-                    </div>
-                    <div class="exp-role">Советник генерального директора</div>
-                    <ul class="exp-desc"><li>Продвижение продукции, анализ рисков, стратегическое консультирование.</li></ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «Dolce» (Медицинские изделия, штат 400)</span>
-                        <span class="exp-period">июль 2021 — март 2023</span>
-                    </div>
-                    <div class="exp-role">Исполнительный директор</div>
-                    <ul class="exp-desc">
-                        <li>Организация бесперебойной работы всех участков, управление производственными планами, CAPA.</li>
-                        <li>Руководитель секции контроля соответствия качества, аудит новых проектов до DQ.</li>
-                        <li>Внедрение элементов GMP в ISO 13485:2016, сохранение материальных активов.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «НУР-МАЙ ФАРМАЦИЯ» (завод, 120 чел)</span>
-                        <span class="exp-period">2019 — 2021</span>
-                    </div>
-                    <div class="exp-role">Заместитель генерального директора по качеству</div>
-                    <ul class="exp-desc"><li>Управление QA/QC, внедрение системы непрерывного контроля.</li></ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «НУР-МАЙ ФАРМАЦИЯ»</span>
-                        <span class="exp-period">2011 — 2019</span>
-                    </div>
-                    <div class="exp-role">Заместитель по производству</div>
-                    <ul class="exp-desc">
-                        <li>Снижение себестоимости: оптимизация линии Plumat, сокращение потерь пленки на 7%.</li>
-                        <li>Оцифровка лабораторных данных (Excel-дашборды с ретроспективным анализом — пример вайб-кодинга для автоматизации QC).</li>
-                        <li>Хронометраж сотрудников QA/QC, пересмотр ДИ, сокращение закупа ресурсов.</li>
-                        <li>Привела процессы в полное соответствие с GMP, разработка универсальных СОП.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-company">ТОО «НУР-МАЙ ФАРМ» (директор завода)</span>
-                        <span class="exp-period">2009 — 2011</span>
-                    </div>
-                    <div class="exp-role">Директор завода</div>
-                    <ul class="exp-desc"><li>Полное управление производственным циклом, запуск новых линий.</li></ul>
-                </div>
-            </div>
-            <div class="achievement-grid">
-                <span class="achievement-badge"><i class="fas fa-chart-line"></i> Снижение брака пленки 7%</span>
-                <span class="achievement-badge"><i class="fas fa-database"></i> Оцифровка исторических данных лаборатории</span>
-                <span class="achievement-badge"><i class="fas fa-bolt"></i> Вайб-кодинг: собственные трекеры сырья</span>
-            </div>
-        </div>
-
-        <!-- ОБРАЗОВАНИЕ И ЛИЦЕНЗИИ -->
-        <div class="section">
-            <h2 class="section-title">Образование & Квалификация</h2>
-            <div class="grid-2col">
-                <div class="card">
-                    <i class="fas fa-graduation-cap"></i> <strong>Высшее медицинское / Провизор-аналитик</strong><br>
-                    Казахский национальный медицинский университет им. С.Д. Асфендиярова, 1992<br><br>
-                    <strong>Ключевые сертификаты:</strong>
-                    <ul style="margin-top: 10px; margin-left: 20px;">
-                        <li>Лицензия №KZ25000751715 (сфера обращения ЛС и МИ, 2025)</li>
-                        <li>Лицензия №KZ25000384682 (повышение квалификации, ВШОЗ, 2025)</li>
-                        <li>Сертификат партнера Bitrix24.KZ (2024)</li>
-                        <li>Обучение платформа TWIN (РФ) — разработка голосовых ботов, интеграция, франшиза (2022)</li>
-                        <li>TUV AUSTRIA Management Program (2015)</li>
-                        <li>Первый МГМУ им. Сеченова, клиническая медицина (2014)</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <i class="fas fa-microphone-alt"></i> <strong>Стажировки & производственные навыки</strong><br>
-                    Обучена на базах: Kolpitt (Голландия), Bausch (Швейцария), Plumat (Германия), Shijiazhuang No.4 Pharmaceutical (Китай), Сеченовский университет.<br><br>
-                    <strong>Цифровые компетенции + Вайб-кодинг:</strong> Архитектура ботов, NLU, CRM Bitrix24, интеграция с базами, аналитика KPI, продвинутый Excel (макросы, Power Query), промпт-инжиниринг, проектирование легковесных скриптов для автоматизации фарм-процессов.
-                </div>
-            </div>
-        </div>
-
-        <!-- О себе + мягкие навыки -->
-        <div class="section">
-            <h2 class="section-title">О себе & Лидерские качества</h2>
-            <div class="grid-2col">
-                <div class="card">
-                    <i class="fas fa-users icon-mr"></i> <strong>Коммуникабельность и лидерство</strong><br>
-                    Профессионально налаживаю деловые контакты, нахожу язык с разными возрастными и социальными группами. В команде легко идентифицирую лидера, устанавливаю контакт для реализации проектов от идеи до конечного продукта.
-                    <div class="flex-list" style="margin-top: 16px;">
-                        <span class="skill-tag">Переговоры</span>
-                        <span class="skill-tag">Антикризисное управление</span>
-                        <span class="skill-tag">Наставничество</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-brain icon-mr"></i> <strong>Скрытые угрозы и аналитика</strong><br>
-                    Идентифицирую юридические и технические риски. Самостоятельна, предприимчива, решаю проблемы автономно и в группе для достижения цели. <strong>Применяю вайб-кодинг для быстрого тестирования гипотез</strong> и создания MVP-инструментов управления.
-                    <div class="achievement-grid" style="margin-top: 16px;">
-                        <span class="achievement-badge"><i class="far fa-clock"></i> Хобби: невербалика, психология</span>
-                        <span class="achievement-badge"><i class="fas fa-robot"></i> Автоматизация рутины</span>
-                        <span class="achievement-badge"><i class="fas fa-utensils"></i> Кулинария & путешествия</span>
+                    <div class="card" style="margin-top:16px;">
+                        <p><strong>Языки:</strong> Русский — свободно, Казахский — свободно, Английский — технический.</p>
                     </div>
                 </div>
             </div>
-            <div class="quote" style="margin-top: 28px;">
-                <i class="fas fa-chalkboard-user"></i> <strong>Миссия:</strong> Получить руководящую должность в стабильно развивающейся компании, чтобы применить многолетний опыт стратегического управления фармацевтическими заводами и лабораториями, создавая «прозрачное» проактивное производство. <strong>Вайб-кодинг — мой драйвер цифровой трансформации.</strong>
+
+            <div style="margin-top:32px; background:#e1f2ee; border-radius:24px; padding:24px; border-left:6px solid #47d7ac;">
+                <p style="font-weight:500; color:#0e4d5e;">
+                    <i class="fas fa-quote-left" style="color:#47d7ac; margin-right:8px;"></i>
+                    Моя философия: создание прослеживаемой системы мониторинга сырья и процессов, где каждое отклонение предупреждается до его возникновения.
+                </p>
             </div>
-        </div>
+        </section>
+
+        <!-- ===== PAGE: CONTACT ===== -->
+        <section class="page" id="page-contact">
+            <h2 class="page-title">Контакты</h2>
+            <div class="contact-card">
+                <div style="font-size:3.5rem; color:#25D366; margin-bottom:16px;">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3 style="color:#0e3b4b; font-size:1.4rem;">Свяжитесь со мной</h3>
+                <p style="color:#2c4253; margin:12px 0 24px;">Предпочтительный способ связи — WhatsApp. Отвечаю оперативно.</p>
+                <a href="https://wa.me/77777717707" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                </a>
+                <div style="margin-top:20px;">
+                    <button class="btn-outline" id="copyPhoneBtn2"><i class="fas fa-phone-alt"></i> Сохранить номер</button>
+                </div>
+                <p style="margin-top:20px; font-size:0.9rem; color:#5b7c8c;">
+                    <i class="fas fa-map-marker-alt"></i> Алматы, Казахстан
+                </p>
+            </div>
+        </section>
+
     </div>
 
-    <div class="footer">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
         <div class="container">
-            <p><i class="fas fa-map-marker-alt"></i> Алматы, Казахстан | <i class="fas fa-phone-alt"></i> +7 777 7717707 | <i class="fas fa-envelope"></i> akhmetsaule4@gmail.com</p>
-            <p style="margin-top: 12px; font-size: 0.8rem;">Сауле Ахмет — стратегический фармацевтический лидер, эксперт по GMP, цифровизации, вайб-кодингу и системам качества. Готова к новым вызовам.</p>
-            <p style="margin-top: 16px;"><i class="far fa-copyright"></i> 2026 Профессиональный сайт-визитка | Инновации в управлении</p>
+            <p style="font-weight:600;">Сауле Ахмет</p>
+            <p style="font-size:0.85rem; opacity:0.8;">Эксперт по GMP, цифровизации и вайб-кодингу</p>
+            <p style="font-size:0.8rem; opacity:0.6; margin-top:8px;">
+                <i class="fab fa-whatsapp" style="color:#25D366;"></i> Связь через WhatsApp
+            </p>
         </div>
-    </div>
+    </footer>
 
     <script>
-        // Интерактив для кнопок с актуальными контактами
-        const copyPhoneBtn = document.getElementById('copyPhoneBtn');
-        const copyCvBtn = document.getElementById('copyCvBtn');
+        // ===== NAVIGATION =====
+        const navLinks = document.querySelectorAll('.nav a');
+        const pages = {
+            home: document.getElementById('page-home'),
+            experience: document.getElementById('page-experience'),
+            vibecoding: document.getElementById('page-vibecoding'),
+            skills: document.getElementById('page-skills'),
+            contact: document.getElementById('page-contact')
+        };
 
-        if(copyPhoneBtn) {
-            copyPhoneBtn.addEventListener('click', (e) => {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                navigator.clipboard.writeText('+7 777 7717707').then(() => {
-                    alert('📞 Номер телефона скопирован: +7 777 7717707');
-                }).catch(() => alert('Не удалось скопировать номер'));
-            });
-        }
-
-        if(copyCvBtn) {
-            copyCvBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('📄 Резюме Сауле Ахмет доступно для скачивания по запросу. Напишите на akhmetsaule4@gmail.com для получения полной версии с примерами вайб-кодинга.');
-            });
-        }
-
-        const btns = document.querySelectorAll('.btn');
-        btns.forEach(btn => {
-            btn.addEventListener('mouseenter', () => {
-                btn.style.transition = 'all 0.2s';
+                const pageName = this.dataset.page;
+                // Убираем active у всех ссылок
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                // Прячем все страницы
+                Object.values(pages).forEach(p => p.classList.remove('active'));
+                // Показываем нужную
+                if (pages[pageName]) pages[pageName].classList.add('active');
+                // Прокрутка вверх
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
+
+        // ===== TOAST =====
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        // ===== COPY PHONE =====
+        function copyPhone() {
+            navigator.clipboard.writeText('+7 777 7717707').then(() => {
+                showToast('📱 Номер сохранён: +7 777 771 77 07');
+            });
+        }
+
+        document.getElementById('copyPhoneBtn').addEventListener('click', copyPhone);
+        document.getElementById('copyPhoneBtn2').addEventListener('click', copyPhone);
     </script>
+
 </body>
 </html>
