@@ -24,7 +24,6 @@
       padding: 0 24px;
     }
 
-    /* Header / Nav */
     .header {
       background: linear-gradient(135deg, #0b2b3b, #124c64);
       color: #fff;
@@ -75,7 +74,6 @@
       color: #47d7ac;
     }
 
-    /* Pages */
     .page {
       display: none;
       padding: 48px 0 64px;
@@ -104,7 +102,6 @@
       margin-top: 8px;
     }
 
-    /* Cards */
     .grid-2col {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -148,7 +145,6 @@
       margin: 4px 4px 0 0;
     }
 
-    /* Experience */
     .exp-item {
       margin-bottom: 32px;
       border-left: 3px solid #47d7ac;
@@ -185,7 +181,6 @@
       margin-bottom: 4px;
     }
 
-    /* Vibe cards */
     .vibe-card {
       background: #fff;
       border-radius: 20px;
@@ -206,7 +201,6 @@
       font-size: 0.9rem;
     }
 
-    /* Contact */
     .contact-card {
       background: #fff;
       border-radius: 28px;
@@ -253,7 +247,6 @@
       color: #fff;
     }
 
-    /* Footer */
     .footer {
       background: #0b2b3b;
       color: #cddfe6;
@@ -264,7 +257,6 @@
       margin-top: 24px;
     }
 
-    /* Toast */
     .toast {
       visibility: hidden;
       min-width: 260px;
@@ -288,6 +280,33 @@
       opacity: 1;
     }
 
+    .hours-badge {
+      display: inline-block;
+      background: #e1f2ee;
+      color: #0e4d5e;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .hours-badge i {
+      margin-right: 8px;
+    }
+
+    .auto-message-preview {
+      background: #f0f9f5;
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid #47d7ac;
+      font-size: 0.95rem;
+      color: #0e4d5e;
+    }
+    .auto-message-preview strong {
+      color: #0b2b3b;
+    }
+
     @media (max-width: 700px) {
       .header-inner {
         flex-direction: column;
@@ -308,7 +327,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
     <div class="logo">Сауле <span>Ахмет</span></div>
@@ -322,7 +340,6 @@
   </div>
 </header>
 
-<!-- TOAST -->
 <div id="toast" class="toast">✅ Скопировано!</div>
 
 <div class="container">
@@ -335,8 +352,17 @@
         <h1 style="font-size:2.8rem; font-weight:800; margin:16px 0 8px; color:#0e3b4b;">Сауле Ахмет</h1>
         <p style="font-size:1.2rem; font-weight:500; color:#2c6e8a;">Директор / Заместитель генерального директора по качеству</p>
         <p style="margin-top:16px; font-size:1.05rem; color:#2c4253;">Более 17 лет в фармацевтике. Внедряю «прозрачное» производство через авторские IT-решения. Перевожу предприятия из режима «исправления ошибок» в проактивное предотвращение отклонений.</p>
+        <div style="margin-top:12px;">
+          <span class="hours-badge"><i class="far fa-clock"></i> Отвечаю с 8:00 до 20:00</span>
+        </div>
+
+        <div class="auto-message-preview">
+          <strong><i class="fas fa-comment-dots"></i> Автоматическое сообщение при нажатии:</strong><br>
+          «Здравствуйте! Благодарю за отклик, опишите сферу деятельности (ЛС, МИ) Стерильное / нестерильное. На какую позицию Вам необходим специалист? Наберу в течение часа. Сауле.»
+        </div>
+
         <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:12px;">
-          <a href="https://wa.me/77777717707?text=Здравствуйте%2C%20Сауле%20Ахмет!%20Меня%20заинтересовала%20ваша%20кандидатура%2C%20и%20я%20хотел(а)%20бы%20обсудить%20возможности%20сотрудничества.%20Буду%20рад(а)%20связаться%20с%20вами%20в%20удобное%20время." target="_blank" class="btn-whatsapp" style="padding:12px 28px; font-size:1rem;">
+          <a href="https://wa.me/77777717707?text=Здравствуйте!%20Благодарю%20за%20отклик%2C%20опишите%20сферу%20деятельности%20(ЛС%2C%20МИ)%20Стерильное%20%2F%20нестерильное.%20На%20какую%20позицию%20Вам%20необходим%20специалист%3F%20Наберу%20в%20течение%20часа.%20Сауле." target="_blank" class="btn-whatsapp" style="padding:12px 28px; font-size:1rem;">
             <i class="fab fa-whatsapp"></i> Написать в WhatsApp
           </a>
           <button class="btn-outline" id="copyPhoneBtn"><i class="fas fa-phone-alt"></i> Сохранить номер</button>
@@ -532,8 +558,17 @@
         <i class="fab fa-whatsapp"></i>
       </div>
       <h3 style="color:#0e3b4b; font-size:1.4rem;">Свяжитесь со мной</h3>
-      <p style="color:#2c4253; margin:12px 0 24px;">Предпочтительный способ связи — WhatsApp. Отвечаю оперативно.</p>
-      <a href="https://wa.me/77777717707?text=Здравствуйте%2C%20Сауле%20Ахмет!%20Меня%20заинтересовала%20ваша%20кандидатура%2C%20и%20я%20хотел(а)%20бы%20обсудить%20возможности%20сотрудничества.%20Буду%20рад(а)%20связаться%20с%20вами%20в%20удобное%20время." target="_blank" class="btn-whatsapp">
+      <p style="color:#2c4253; margin:12px 0 8px;">Предпочтительный способ связи — WhatsApp. Отвечаю оперативно.</p>
+      <p style="color:#0e4d5e; font-weight:600; margin-bottom:20px;">
+        <i class="far fa-clock"></i> 🕐 Отвечаю с 8:00 до 20:00
+      </p>
+
+      <div class="auto-message-preview" style="text-align:left; background:#f0f9f5;">
+        <strong><i class="fas fa-comment-dots"></i> Автоматическое сообщение:</strong><br>
+        «Здравствуйте! Благодарю за отклик, опишите сферу деятельности (ЛС, МИ) Стерильное / нестерильное. На какую позицию Вам необходим специалист? Наберу в течение часа. Сауле.»
+      </div>
+
+      <a href="https://wa.me/77777717707?text=Здравствуйте!%20Благодарю%20за%20отклик%2C%20опишите%20сферу%20деятельности%20(ЛС%2C%20МИ)%20Стерильное%20%2F%20нестерильное.%20На%20какую%20позицию%20Вам%20необходим%20специалист%3F%20Наберу%20в%20течение%20часа.%20Сауле." target="_blank" class="btn-whatsapp">
         <i class="fab fa-whatsapp"></i> Написать в WhatsApp
       </a>
       <div style="margin-top:20px;">
@@ -547,7 +582,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <p style="font-weight:600;">Сауле Ахмет</p>
@@ -559,7 +593,6 @@
 </footer>
 
 <script>
-  // ===== NAVIGATION =====
   const navLinks = document.querySelectorAll('.nav a');
   const pages = {
     home: document.getElementById('page-home'),
@@ -581,7 +614,6 @@
     });
   });
 
-  // ===== TOAST =====
   function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
@@ -589,7 +621,6 @@
     setTimeout(() => t.classList.remove('show'), 2500);
   }
 
-  // ===== COPY PHONE =====
   function copyPhone() {
     navigator.clipboard.writeText('+7 777 7717707').then(() => {
       showToast('📱 Номер сохранён: +7 777 771 77 07');
@@ -598,10 +629,6 @@
 
   document.getElementById('copyPhoneBtn').addEventListener('click', copyPhone);
   document.getElementById('copyPhoneBtn2').addEventListener('click', copyPhone);
-
-  // ===== WHATSAPP AUTO-MESSAGE (уже в ссылках) =====
-  // текст сообщения: 
-  // "Здравствуйте, Сауле Ахмет! Меня заинтересовала ваша кандидатура, и я хотел(а) бы обсудить возможности сотрудничества. Буду рад(а) связаться с вами в удобное время."
 </script>
 </body>
 </html>
