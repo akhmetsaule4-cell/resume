@@ -294,6 +294,20 @@
       margin-right: 8px;
     }
 
+    .template-hint {
+      background: #f0f9f5;
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin: 16px 0;
+      border-left: 4px solid #25D366;
+      font-size: 0.95rem;
+      color: #0e4d5e;
+    }
+    .template-hint i {
+      color: #25D366;
+      margin-right: 8px;
+    }
+
     @media (max-width: 700px) {
       .header-inner {
         flex-direction: column;
@@ -343,8 +357,12 @@
           <span class="hours-badge"><i class="far fa-clock"></i> Отвечаю с 8:00 до 20:00</span>
         </div>
 
+        <div class="template-hint">
+          <i class="fas fa-info-circle"></i> <strong>Для связи:</strong> нажмите на кнопку ниже, и в WhatsApp откроется чат с готовым шаблоном обращения. Вам останется только указать свои ФИО и номер телефона.
+        </div>
+
         <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:12px;">
-          <a href="https://wa.me/77777717707?text=Здравствуйте!%20Благодарю%20за%20отклик%2C%20опишите%20сферу%20деятельности%20(ЛС%2C%20МИ)%20Стерильное%20%2F%20нестерильное.%20На%20какую%20позицию%20Вам%20необходим%20специалист%3F%20Наберу%20в%20течение%20часа.%20Сауле." target="_blank" class="btn-whatsapp" style="padding:12px 28px; font-size:1rem;">
+          <a href="https://wa.me/77777717707?text=Здравствуйте%2C%20Сауле%20Ахмет!%20Меня%20заинтересовало%20ваше%20резюме.%20Перезвоните%20мне%2C%20пожалуйста%2C%20когда%20будет%20удобно.%20%0A%0AФИО%3A%20________%0AНомер%20телефона%3A%20________" target="_blank" class="btn-whatsapp" style="padding:12px 28px; font-size:1rem;">
             <i class="fab fa-whatsapp"></i> Написать в WhatsApp
           </a>
           <button class="btn-outline" id="copyPhoneBtn"><i class="fas fa-phone-alt"></i> Сохранить номер</button>
@@ -545,7 +563,14 @@
         <i class="far fa-clock"></i> 🕐 Отвечаю с 8:00 до 20:00
       </p>
 
-      <a href="https://wa.me/77777717707?text=Здравствуйте!%20Благодарю%20за%20отклик%2C%20опишите%20сферу%20деятельности%20(ЛС%2C%20МИ)%20Стерильное%20%2F%20нестерильное.%20На%20какую%20позицию%20Вам%20необходим%20специалист%3F%20Наберу%20в%20течение%20часа.%20Сауле." target="_blank" class="btn-whatsapp">
+      <div class="template-hint" style="text-align:left;">
+        <i class="fas fa-info-circle"></i> <strong>Шаблон обращения:</strong><br>
+        «Здравствуйте, Сауле Ахмет! Меня заинтересовало ваше резюме. Перезвоните мне, пожалуйста, когда будет удобно.<br><br>
+        ФИО: ________<br>
+        Номер телефона: ________»
+      </div>
+
+      <a href="https://wa.me/77777717707?text=Здравствуйте%2C%20Сауле%20Ахмет!%20Меня%20заинтересовало%20ваше%20резюме.%20Перезвоните%20мне%2C%20пожалуйста%2C%20когда%20будет%20удобно.%20%0A%0AФИО%3A%20________%0AНомер%20телефона%3A%20________" target="_blank" class="btn-whatsapp">
         <i class="fab fa-whatsapp"></i> Написать в WhatsApp
       </a>
       <div style="margin-top:20px;">
